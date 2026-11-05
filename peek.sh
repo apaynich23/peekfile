@@ -1,3 +1,7 @@
-head -n "$2" "$1"
+
+X=$2
+if [[ -z $X ]]; then X=3; fi
+echo "X is $X"
+head -n "$X" "$1"
 echo "..."
-tail -n "$2" "$1"
+tail -n "$X" "$1"
